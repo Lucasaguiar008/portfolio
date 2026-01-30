@@ -29,8 +29,11 @@
 
   <div id="navMenu" class="navbar-menu">
     <div class="navbar-end">
-      <a class="navbar-item" onclick="setLanguage('pt')">PT 🇧🇷</a>
-      <a class="navbar-item" onclick="setLanguage('en')">EN 🇺🇸</a>
+      <div class="navbar-item language-switcher">
+        <span onclick="setLanguage('pt')" title="Português">🇧🇷</span>
+        <span onclick="setLanguage('en')" title="English">🇺🇸</span>
+        <span onclick="setLanguage('de')" title="Deutsch">🇩🇪</span>
+      </div>
       <a class="navbar-item" href="#ats">Versão ATS</a>
     </div>
   </div>
@@ -85,17 +88,23 @@
   <hr>
 
   <p><strong>Pesquisador – GTEL/UFC</strong> (Abr/2025 – Atual)</p>
-  <p>Desenvolvimento de algoritmos de gerenciamento de interferência em redes 6G utilizando otimização e simulação computacional.</p>
+  <p>
+    Desenvolvimento de algoritmos de gerenciamento de interferência em redes 6G utilizando otimização e simulação computacional.
+  </p>
 
   <br>
 
   <p><strong>Professor – Tesla Treinamentos</strong> (Jul/2025 – Dez/2025)</p>
-  <p>Docência em cursos de pós-graduação e capacitação técnica nas áreas de engenharia elétrica e energia.</p>
+  <p>
+    Docência em cursos de pós-graduação e capacitação técnica nas áreas de engenharia elétrica e energia.
+  </p>
 
   <br>
 
   <p><strong>Supervisor Técnico – New Call</strong> (Jan/2016 – Ago/2025)</p>
-  <p>Supervisão de equipes de suporte técnico em redes de computadores e infraestrutura.</p>
+  <p>
+    Supervisão de equipes de suporte técnico em redes de computadores e infraestrutura.
+  </p>
 </div>
 
 <!-- FORMAÇÃO -->
@@ -137,7 +146,10 @@ Contact: lucas.aguiar008@gmail.com
 <!-- JS -->
 <script>
 function setLanguage(lang) {
+
   if (lang === 'en') {
+    document.documentElement.lang = "en";
+
     document.getElementById("title-role").innerText =
       "Electrical Engineer | Artificial Intelligence applied to Engineering";
 
@@ -149,11 +161,31 @@ function setLanguage(lang) {
     document.getElementById("exp-title").innerText = "Professional Experience";
     document.getElementById("edu-title").innerText = "Education";
     document.getElementById("contact-title").innerText = "Contact";
-  } else {
+  }
+
+  else if (lang === 'de') {
+    document.documentElement.lang = "de";
+
+    document.getElementById("title-role").innerText =
+      "Elektroingenieur | Künstliche Intelligenz in der Ingenieurwissenschaft";
+
+    document.getElementById("summary-title").innerText = "Berufliches Profil";
+    document.getElementById("summary-text").innerText =
+      "Elektroingenieur mit Masterabschluss und laufender Promotion, tätig in den Bereichen Künstliche Intelligenz, Optimierung und rechnergestützte Simulation in der Ingenieurwissenschaft.";
+
+    document.getElementById("skills-title").innerText = "Technische Kompetenzen";
+    document.getElementById("exp-title").innerText = "Berufserfahrung";
+    document.getElementById("edu-title").innerText = "Akademische Ausbildung";
+    document.getElementById("contact-title").innerText = "Kontakt";
+  }
+
+  else {
+    document.documentElement.lang = "pt-br";
     location.reload();
   }
 }
 
+// Burger mobile
 document.addEventListener('DOMContentLoaded', () => {
   const burgers = document.querySelectorAll('.navbar-burger');
   burgers.forEach(el => {
