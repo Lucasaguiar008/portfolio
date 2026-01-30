@@ -21,7 +21,6 @@
 <nav class="navbar is-light">
   <div class="navbar-brand">
     <a class="navbar-item"><strong>Lucas Aguiar</strong></a>
-
     <a role="button" class="navbar-burger" data-target="navMenu">
       <span></span><span></span><span></span>
     </a>
@@ -30,11 +29,10 @@
   <div id="navMenu" class="navbar-menu">
     <div class="navbar-end">
       <div class="navbar-item language-switcher">
-        <img src="imagens/flags/br.png" alt="Português" onclick="setLanguage('pt')">
-        <img src="imagens/flags/us.png" alt="English" onclick="setLanguage('en')">
-        <img src="imagens/flags/de.png" alt="Deutsch" onclick="setLanguage('de')">
+        <img src="imagens/flags/br.svg" title="Português" onclick="setLanguage('pt')">
+        <img src="imagens/flags/us.svg" title="English" onclick="setLanguage('en')">
+        <img src="imagens/flags/de.svg" title="Deutsch" onclick="setLanguage('de')">
       </div>
-      <a class="navbar-item" href="#ats">Versão ATS</a>
     </div>
   </div>
 </nav>
@@ -42,14 +40,11 @@
 <section class="section">
 <div class="container">
 
-<!-- HEADER COM FOTO -->
-<div class="columns is-vcentered is-variable is-6">
+<!-- HEADER -->
+<div class="columns is-vcentered">
   <div class="column is-3 has-text-centered">
-    <figure class="image is-128x128 profile-pic">
-      <img class="is-rounded" src="imagens/foto_nova_2.jpg" alt="Foto de Lucas Aguiar">
-    </figure>
+    <img class="profile-img is-rounded" src="imagens/foto_nova_2.jpg">
   </div>
-
   <div class="column">
     <h1 class="title">Lucas Aguiar</h1>
     <h2 class="subtitle" id="title-role">
@@ -63,45 +58,113 @@
   <strong id="summary-title">Resumo Profissional</strong>
   <hr>
   <p id="summary-text">
-    Engenheiro Eletricista com mestrado em Engenharia Elétrica e Computação e doutorado em andamento, atuando no desenvolvimento de soluções baseadas em Inteligência Artificial, otimização e simulação computacional aplicadas à engenharia. Experiência em telecomunicações (6G), algoritmos inteligentes e análise de desempenho de sistemas complexos.
+    Engenheiro Eletricista com mestrado em Engenharia Elétrica e Computação e doutorado em andamento.
+    Atua com Inteligência Artificial aplicada à engenharia, otimização, simulação computacional e
+    telecomunicações (6G), com experiência acadêmica, docente e profissional.
   </p>
 </div>
 
-<!-- HABILIDADES -->
+<!-- EXPERIÊNCIA -->
 <div class="box">
-  <strong id="skills-title">Habilidades Técnicas</strong>
+  <strong>Experiência Profissional</strong>
+  <hr>
+
+  <details open>
+    <summary><strong>Pesquisador — GTEL / UFC</strong> (Abr/2025 – Atual)</summary>
+    <p>
+      Pesquisa aplicada em gerenciamento de interferência em redes 6G, utilizando otimização,
+      simulação computacional e análise de desempenho. Desenvolvimento de algoritmos em Python
+      e MATLAB para avaliação de eficiência espectral.
+    </p>
+  </details>
+
+  <details>
+    <summary><strong>Professor — Tesla Treinamentos</strong> (Jul/2025 – Dez/2025)</summary>
+    <ul>
+      <li>Pós-graduação em Segurança do Trabalho (Módulos legais e técnicos)</li>
+      <li>Energia Solar Fotovoltaica</li>
+      <li>SPDA</li>
+      <li>Instalações Elétricas</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary><strong>Supervisor Técnico — New Call</strong> (2016 – 2025)</summary>
+    <p>
+      Supervisão de equipes de suporte técnico em redes de computadores, acompanhamento de indicadores,
+      resolução de falhas e gestão operacional.
+    </p>
+  </details>
+
+  <details>
+    <summary><strong>Projetista de Engenharia Elétrica — Assertiva Engenharia</strong> (2022)</summary>
+    <p>
+      Projetos e homologação de sistemas de microgeração fotovoltaica, análise técnica e
+      atendimento às normas regulatórias.
+    </p>
+  </details>
+
+  <details>
+    <summary><strong>Estagiário — Amplisol Engenharia</strong> (2019–2020)</summary>
+    <p>
+      Apoio técnico em projetos fotovoltaicos e redes ópticas, incluindo dimensionamento e homologação.
+    </p>
+  </details>
+
+  <details>
+    <summary><strong>Estagiário — EMBRAPA (NTI)</strong> (2015)</summary>
+    <p>
+      Suporte técnico em ambiente corporativo, manutenção de equipamentos e suporte à rede.
+    </p>
+  </details>
+</div>
+
+<!-- FORMAÇÃO -->
+<div class="box">
+  <strong>Formação Acadêmica</strong>
   <hr>
   <ul>
-    <li>Inteligência Artificial aplicada à Engenharia</li>
-    <li>Machine Learning e Otimização</li>
-    <li>Python (ML, simulações, análise de dados)</li>
-    <li>MATLAB, Octave e Scilab</li>
-    <li>Telecomunicações e redes 6G</li>
-    <li>Sistemas elétricos e energia fotovoltaica</li>
-    <li>Git e GitHub</li>
+    <li><strong>Doutorado em Engenharia de Teleinformática</strong> — UFC (em andamento)</li>
+    <li><strong>Mestrado em Engenharia Elétrica e Computação</strong> — UFC</li>
+    <li>Bacharelado em Engenharia Elétrica — UFC</li>
+    <li>Especialização em Energias Renováveis — CENTEC</li>
+    <li>Ciência da Computação — UVA (interrompido)</li>
+    <li>Técnico em Redes de Computadores</li>
   </ul>
 </div>
 
-<!-- ATS -->
-<div class="box ats" id="ats">
-  <strong>Versão ATS (Texto Linear)</strong>
+<!-- QUALIFICAÇÕES -->
+<div class="box">
+  <strong>Qualificações e Cursos</strong>
   <hr>
-  <pre>
-Lucas Aguiar
-Electrical Engineer focused on Artificial Intelligence applied to engineering.
-Skills: Python, Machine Learning, Optimization, MATLAB, Telecommunications, Electrical Systems.
-Education: PhD (ongoing), MSc, BSc in Electrical Engineering.
-Contact: lucas.aguiar008@gmail.com
-  </pre>
+  <ul>
+    <li>Python Avançado, Intermediário e Básico — Huawei / Fatec</li>
+    <li>Deep Learning — NVIDIA</li>
+    <li>Machine Learning aplicado à Engenharia</li>
+    <li>Energia Solar Fotovoltaica e SPDA</li>
+    <li>Git e GitHub</li>
+    <li>Inglês Intermediário</li>
+  </ul>
+</div>
+
+<!-- CONHECIMENTOS -->
+<div class="box">
+  <strong>Conhecimentos Técnicos</strong>
+  <hr>
+  <ul>
+    <li>Python, MATLAB, Octave, Scilab</li>
+    <li>Algoritmos de otimização e roteamento</li>
+    <li>Redes sem fio e telecomunicações</li>
+    <li>IA aplicada à engenharia</li>
+    <li>Energia fotovoltaica</li>
+  </ul>
 </div>
 
 </div>
 </section>
 
-<!-- JS -->
 <script>
 function setLanguage(lang) {
-
   if (lang === 'en') {
     document.documentElement.lang = "en";
     document.getElementById("title-role").innerText =
@@ -109,34 +172,19 @@ function setLanguage(lang) {
     document.getElementById("summary-title").innerText = "Professional Summary";
     document.getElementById("summary-text").innerText =
       "Electrical Engineer with a Master's degree and PhD in progress, working with Artificial Intelligence, optimization and computational simulation applied to engineering.";
-    document.getElementById("skills-title").innerText = "Technical Skills";
   }
-
   else if (lang === 'de') {
     document.documentElement.lang = "de";
     document.getElementById("title-role").innerText =
       "Elektroingenieur | Künstliche Intelligenz in der Ingenieurwissenschaft";
     document.getElementById("summary-title").innerText = "Berufliches Profil";
     document.getElementById("summary-text").innerText =
-      "Elektroingenieur mit Masterabschluss und laufender Promotion, tätig in den Bereichen Künstliche Intelligenz, Optimierung und rechnergestützte Simulation.";
-    document.getElementById("skills-title").innerText = "Technische Kompetenzen";
+      "Elektroingenieur mit Masterabschluss und laufender Promotion, tätig in den Bereichen Künstliche Intelligenz, Optimierung und Simulation.";
   }
-
   else {
     location.reload();
   }
 }
-
-// Burger mobile
-document.addEventListener('DOMContentLoaded', () => {
-  const burgers = document.querySelectorAll('.navbar-burger');
-  burgers.forEach(el => {
-    el.addEventListener('click', () => {
-      el.classList.toggle('is-active');
-      document.getElementById('navMenu').classList.toggle('is-active');
-    });
-  });
-});
 </script>
 
 </body>

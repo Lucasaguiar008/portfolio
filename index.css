@@ -4,62 +4,45 @@ body {
   color: #2b2b2b;
 }
 
-/* FOTO */
-.profile-pic img {
+.profile-img {
+  width: 150px;
   border: 3px solid #3273dc;
-  padding: 3px;
-  background: #fff;
+  padding: 4px;
 }
 
-/* BOXES */
 .box {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .box:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-/* LINKS */
-a {
-  color: #3273dc;
-}
-
-/* ATS */
-.ats {
-  background-color: #f5f5f5;
-  border-left: 4px solid #3273dc;
-}
-
-pre {
-  white-space: pre-wrap;
-  font-size: 0.9rem;
-}
-
-/* SELETOR DE IDIOMA */
 .language-switcher img {
   width: 28px;
   height: 20px;
   cursor: pointer;
   margin-left: 10px;
   border-radius: 3px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.language-switcher img:hover {
-  transform: scale(1.15);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+details {
+  margin-bottom: 10px;
 }
 
-/* MOBILE */
-@media (hover: none) {
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+details p, details ul {
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+@media (hover:none) {
   .box:hover {
-    transform: none;
-    box-shadow: none;
-  }
-
-  .language-switcher img:hover {
     transform: none;
     box-shadow: none;
   }
