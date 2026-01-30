@@ -4,13 +4,14 @@ body {
   color: #2b2b2b;
 }
 
-/* FOTO DE PERFIL */
+/* FOTO DE PERFIL — FORÇADA A SER REDONDA */
 .profile-img {
-  width: 110px;          /* menor */
-  height: 110px;
+  width: 96px;
+  height: 96px;
   object-fit: cover;
-  border-radius: 50%;    /* perfeitamente arredondada */
+  border-radius: 50%;
   border: 3px solid #3273dc;
+  display: inline-block;
 }
 
 /* CAIXAS */
@@ -22,7 +23,7 @@ body {
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-/* SELETOR DE IDIOMA (PNG) */
+/* SELETOR DE IDIOMA (.png) */
 .language-switcher img {
   width: 26px;
   height: 18px;
@@ -36,6 +37,18 @@ body {
   transform: scale(1.15);
 }
 
+/* ATS */
+.ats {
+  background-color: #f4f4f4;
+  border-left: 4px solid #3273dc;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
 /* LISTAS */
 ul li {
   margin-bottom: 6px;
@@ -44,8 +57,8 @@ ul li {
 /* MOBILE */
 @media screen and (max-width: 768px) {
   .profile-img {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
   }
 
   .language-switcher img {
