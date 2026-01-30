@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo Lucas Aguiar - ATS</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11pt;
+      line-height: 1.6;
+      color: #000;
+      background-color: #fff;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 60px;
+    }
+
+    h1 {
+      font-size: 24pt;
+      font-weight: bold;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 14pt;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      border-bottom: 2px solid #000;
+      padding-bottom: 5px;
+    }
+
+    h3 {
+      font-size: 12pt;
+      font-weight: bold;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    .contact-info {
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .job-title {
+      font-weight: bold;
+      font-size: 11pt;
+    }
+
+    .company-name {
+      font-style: italic;
+      font-size: 11pt;
+    }
+
+    .date {
+      font-size: 10pt;
+      color: #333;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    @media print {
+      body {
+        padding: 20px;
+      }
+    }
+
+    /* Seletor de idiomas para versão ATS */
+    .language-selector {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .lang-btn {
+      border: 1px solid #ddd;
+      background: white;
+      cursor: pointer;
+      margin: 0 3px;
+      padding: 5px 10px;
+      font-size: 10pt;
+      transition: all 0.3s;
+    }
+    
+    .lang-btn:hover {
+      background: #f0f0f0;
+    }
+    
+    .lang-btn.is-active {
+      background: #000;
+      color: white;
+      border-color: #000;
+    }
+
+    @media print {
+      .language-selector {
+        display: none;
+      }
+      .back-btn {
+        display: none;
+      }
+    }
+    
+    .back-btn {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      z-index: 1000;
+      background: #000;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .back-btn:hover {
+      background: #333;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      color: white;
+    }
+    
+    .back-btn::before {
+      content: "🎨";
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Seletor de Idiomas -->
+  <div class="language-selector">
+    <button class="lang-btn is-active" data-lang="pt">PT</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="de">DE</button>
+  </div>
+
+  <!-- Botão Voltar para Versão Visual -->
+  <a href="index.html" class="back-btn" title="Versão visual com design completo">
+    Versão Visual
+  </a>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <h1>Lucas Aguiar</h1>
+    <p class="contact-info">
+      <span data-i18n="tagEng">Engenheiro Eletricista</span> | <span data-i18n="tagMestre">Mestre em Engenharia</span> | <span data-i18n="tagDev">Desenvolvedor em Formação</span><br>
+      Email: lucas.aguiar008@gmail.com | Telefone: (88) 99286-2019<br>
+      LinkedIn: linkedin.com/in/lucas-aguiar-2363b2168 | Instagram: @lucas.aguiarr<br>
+      <span data-i18n="sobre3">Localização: Sobral-CE / Fortaleza-CE</span><br>
+      <span data-i18n="sobre8">Habilitação: A e B</span> | <span data-i18n="sobre9">Idade: 27 anos</span>
+    </p>
+  </header>
+
+  <!-- RESUMO PROFISSIONAL -->
+  <section class="section">
+    <h2 data-i18n="resumoProfissional">RESUMO PROFISSIONAL</h2>
+    <p data-i18n="resumoTexto">
+      Engenheiro Eletricista com mestrado em Engenharia da Computação e Elétrica e doutorando em Telecomunicações pela UFC. Mais de 9 anos de experiência em supervisão de equipes, projetos de telecomunicações ópticas e energia solar fotovoltaica. Especialista em Python, Machine Learning e desenvolvimento web Full Stack. Pesquisador em gerenciamento de interferência em redes 6G e algoritmos de otimização para VANTs. Professor em pós-graduação e cursos técnicos. Busco desafios em tecnologia, inovação e desenvolvimento de soluções inteligentes.
+    </p>
+  </section>
+
+  <!-- HABILIDADES TÉCNICAS -->
+  <section class="section">
+    <h2 data-i18n="habilidades">HABILIDADES TÉCNICAS</h2>
+    
+    <h3 data-i18n="habProgramacao">Programação:</h3>
+    <ul>
+      <li data-i18n="habProg1">Python (Machine Learning, Deep Learning, OpenCV)</li>
+      <li data-i18n="habProg2">JavaScript (Node.js, React - em formação)</li>
+      <li data-i18n="habProg3">MATLAB, Scilab, Octave</li>
+      <li data-i18n="habProg4">VBA (Excel, Selenium, Web Scraping)</li>
+    </ul>
+
+    <h3 data-i18n="habEngenharia">Engenharia Elétrica:</h3>
+    <ul>
+      <li data-i18n="habEng1">Projetos de Energia Solar Fotovoltaica</li>
+      <li data-i18n="habEng2">Sistemas de Proteção (SPDA, NR10)</li>
+      <li data-i18n="habEng3">Instalações Elétricas Residenciais</li>
+      <li data-i18n="habEng4">Energias Renováveis e Hidrogênio Verde</li>
+    </ul>
+
+    <h3 data-i18n="habTelecom">Telecomunicações:</h3>
+    <ul>
+      <li data-i18n="habTel1">Redes Ópticas (FTTH, GPON)</li>
+      <li data-i18n="habTel2">Redes Móveis (4G/5G/6G)</li>
+      <li data-i18n="habTel3">Gerenciamento de Interferência</li>
+      <li data-i18n="habTel4">Algoritmos de Otimização (ACS, A*, DWA)</li>
+    </ul>
+
+    <h3 data-i18n="habGestao">Gestão e Outras:</h3>
+    <ul>
+      <li data-i18n="habGes1">Supervisão de Equipes</li>
+      <li data-i18n="habGes2">Redes de Computadores</li>
+      <li data-i18n="habGes3">Suporte Técnico e SAC</li>
+      <li data-i18n="habGes4">Inglês (Intermediário)</li>
+    </ul>
+  </section>
+
+  <!-- EXPERIÊNCIA PROFISSIONAL -->
+  <section class="section">
+    <h2 data-i18n="experiencias">EXPERIÊNCIA PROFISSIONAL</h2>
+
+    <!-- Gtel -->
+    <div>
+      <p class="job-title" data-i18n="cargo1">Pesquisador</p>
+      <p class="company-name"><span data-i18n="empresa1">Gtel (Grupo de Pesquisa em Telecomunicações sem Fio)</span> | <span class="date" data-i18n="periodo1">Abril/2025 - Atual</span></p>
+      <p data-i18n="desc1">Conduzindo pesquisa avançada em gerenciamento de interferência em redes 6G, desenvolvendo algoritmos de otimização e análise de desempenho de redes móveis de última geração. Contribuindo para publicações científicas e projetos de P&D em telecomunicações.</p>
+    </div>
+
+    <!-- Tesla -->
+    <div>
+      <p class="job-title" data-i18n="cargo2">Professor</p>
+      <p class="company-name"><span data-i18n="empresa2">Tesla Treinamentos</span> | <span class="date" data-i18n="periodo2">Julho/2024 - Atual (6 meses)</span></p>
+      <p data-i18n="desc2_intro">Ministrando aulas em pós-graduação e cursos técnicos, capacitando mais de 150 profissionais em:</p>
+      <ul>
+        <li data-i18n="desc2_item1">Pós-graduação em Segurança do Trabalho - Módulos 1 e 2 (Fundamentos Legais, Normativos, Éticos e Técnicos)</li>
+        <li data-i18n="desc2_item2">Energia Solar Fotovoltaica (projeto, dimensionamento e homologação)</li>
+        <li data-i18n="desc2_item3">SPDA (Sistema de Proteção contra Descargas Atmosféricas - NBR 5419)</li>
+        <li data-i18n="desc2_item4">Instalações Elétricas Residenciais (NBR 5410)</li>
+      </ul>
+      <p data-i18n="desc2_extra">Desenvolvendo material didático e aplicando metodologias ativas de ensino.</p>
+    </div>
+
+    <!-- New Call -->
+    <div>
+      <p class="job-title" data-i18n="cargo3">Supervisor</p>
+      <p class="company-name"><span data-i18n="empresa3">New Call</span> | <span class="date" data-i18n="periodo3">Janeiro/2016 - Agosto/2025 (9 anos)</span></p>
+      <p data-i18n="desc3">Supervisionei equipe de 12 técnicos de SAC/Suporte em redes de computadores, reduzindo o tempo médio de atendimento em 30% e aumentando a satisfação dos clientes de 78% para 92%. Implementei processos de monitoramento de serviços, treinamento contínuo da equipe e melhorias operacionais para os clientes FasterNet/Desktop. Gerenciei mais de 5.000 tickets de suporte durante o período.</p>
+    </div>
+
+    <!-- Assertiva -->
+    <div>
+      <p class="job-title" data-i18n="cargo4">Projetista de Engenharia Elétrica</p>
+      <p class="company-name"><span data-i18n="empresa4">Assertiva Engenharia</span> | <span class="date" data-i18n="periodo4">Março/2022 - Setembro/2022 (6 meses)</span></p>
+      <p data-i18n="desc4">Elaborei 25+ projetos de microgeração fotovoltaica homologados junto à concessionária, totalizando mais de 350 kWp instalados. Realizei dimensionamento técnico, análise de viabilidade econômica e vendas consultivas de equipamentos, gerando R$ 450.000 em negócios. Prestei suporte técnico pré e pós-venda aos clientes.</p>
+    </div>
+
+    <!-- Amplisol -->
+    <div>
+      <p class="job-title" data-i18n="cargo5">Estagiário de Engenharia Elétrica</p>
+      <p class="company-name"><span data-i18n="empresa5">Amplisol Engenharia</span> | <span class="date" data-i18n="periodo5">Julho/2019 - Novembro/2020 (16 meses)</span></p>
+      <p data-i18n="desc5">Desenvolvi 40+ projetos de microgeração fotovoltaica e 15+ projetos de redes FTTH (Fiber to the Home) com tecnologia GPON. Realizei levantamento em campo, dimensionamento de equipamentos, elaboração de memoriais descritivos e plantas técnicas. Contribuí para aumento de 45% nas vendas técnicas através de consultoria especializada aos clientes.</p>
+    </div>
+
+    <!-- EMBRAPA -->
+    <div>
+      <p class="job-title" data-i18n="cargo6">Estagiário no setor de NTI (Núcleo de Tecnologia da Informação)</p>
+      <p class="company-name"><span data-i18n="empresa6">EMBRAPA</span> | <span class="date" data-i18n="periodo6">Abril/2015 - Julho/2015 (400 horas)</span></p>
+      <p data-i18n="desc6">Prestei suporte técnico a 80+ colaboradores, solucionando problemas de hardware (manutenção de computadores e notebooks), software e rede. Realizei instalação e configuração de impressoras, backup de dados e manutenção preventiva. Documentei procedimentos técnicos e contribuí para redução de 25% no tempo de resolução de chamados.</p>
+    </div>
+  </section>
+
+  <!-- FORMAÇÃO ACADÊMICA -->
+  <section class="section">
+    <h2 data-i18n="formacao">FORMAÇÃO ACADÊMICA</h2>
+
+    <!-- Doutorado -->
+    <div>
+      <p class="job-title" data-i18n="form1_titulo">Doutorando em Engenharia de Teleinformática (PPGETI/UFC)</p>
+      <p><span data-i18n="form1_instituicao">Universidade Federal do Ceará</span> | <span class="date" data-i18n="form1_periodo">Abril/2025 - Atual</span></p>
+      <p data-i18n="form1_desc">Gerenciamento de interferência em redes 6G.</p>
+    </div>
+
+    <!-- Mestrado -->
+    <div>
+      <p class="job-title" data-i18n="form2_titulo">Mestre em Engenharia da Computação e Elétrica (UFC)</p>
+      <p><span data-i18n="form2_instituicao">Universidade Federal do Ceará</span> | <span class="date" data-i18n="form2_periodo">Fevereiro/2023 - Abril/2025 (Concluído)</span></p>
+      <p data-i18n="form2_desc">Linha de pesquisa em Algoritmos e Computação Distribuída com ênfase em planejamento de rotas com múltiplos VANTs colaborativos.</p>
+      <ul>
+        <li data-i18n="form2_item1">Aplicação dos algoritmos Ant Colony System (ACS), A* e DWA (Dynamic Window Approach).</li>
+        <li data-i18n="form2_item2">Desenvolvimento de sistema de roteamento inteligente para veículos aéreos com desvio de obstáculos.</li>
+      </ul>
+    </div>
+
+    <!-- Especialização -->
+    <div>
+      <p class="job-title" data-i18n="form3_titulo">Especialização em Energias Renováveis (CENTEC)</p>
+      <p><span data-i18n="form3_instituicao">Faculdade de Tecnologia CENTEC Cariri</span> | <span class="date" data-i18n="form3_periodo">Setembro/2024 - Janeiro/2025 (Concluído)</span></p>
+      <ul>
+        <li data-i18n="form3_item1">Energias Renováveis e Sustentabilidade</li>
+        <li data-i18n="form3_item2">Hidrogênio Verde e Armazenamento de Energia</li>
+        <li data-i18n="form3_item3">Energia Eólica e Sistemas Híbridos</li>
+      </ul>
+    </div>
+
+    <!-- Graduação UFC -->
+    <div>
+      <p class="job-title" data-i18n="form4_titulo">Engenheiro Eletricista (UFC)</p>
+      <p><span data-i18n="form4_instituicao">Universidade Federal do Ceará</span> | <span class="date" data-i18n="form4_periodo">Janeiro/2016 - Dezembro/2022 (Concluído)</span></p>
+      <p data-i18n="form4_desc">Habilidades em Machine Learning, Redes Neurais, Telecomunicações e Energias Renováveis.</p>
+    </div>
+
+    <!-- UVA -->
+    <div>
+      <p class="job-title" data-i18n="form5_titulo">Ciências da Computação (UVA)</p>
+      <p><span data-i18n="form5_instituicao">Universidade Estadual Vale do Acaraú</span> | <span class="date" data-i18n="form5_periodo">Janeiro/2015 - Dezembro/2016 (Interrompido)</span></p>
+      <p data-i18n="form5_desc">Bacharelado interrompido em 2016 (Pretensão de retornar caso surjam oportunidades).</p>
+    </div>
+
+    <!-- Técnico -->
+    <div>
+      <p class="job-title" data-i18n="form6_titulo">Técnico em Redes de Computadores</p>
+      <p><span data-i18n="form6_instituicao">Escola Dom Walfrido Teixeira Vieira</span> | <span class="date" data-i18n="form6_periodo">Janeiro/2013 - Dezembro/2015 (Concluído)</span></p>
+      <p data-i18n="form6_desc">Ensino médio técnico integrado.</p>
+    </div>
+  </section>
+
+  <!-- CERTIFICAÇÕES E QUALIFICAÇÕES -->
+  <section class="section">
+    <h2 data-i18n="qualificacoes">CERTIFICAÇÕES E QUALIFICAÇÕES</h2>
+    <ul>
+      <li>Programador JavaScript FullStack - One Bit Code (Em andamento)</li>
+      <li>Pós-Graduação em Energias Renováveis - H-Tec (360h)</li>
+      <li>Certificação Python Avançado - Fatec/SP - Huawei, 2024 (32h)</li>
+      <li>Certificação Python Intermediário - Fatec/SP - Huawei, 2024 (32h)</li>
+      <li>Certificação Python Básico - Fatec/SP - Huawei, 2024 (32h)</li>
+      <li>Certificação em Deep Learning - Nvidia, 2024 (8h)</li>
+      <li>Projeto com HTML/CSS para listagem de Pokémon - BootCamp Santander DIO, 2023 (2h)</li>
+      <li>Introdução ao Desenvolvimento Web com JavaScript - BootCamp Santander DIO, 2023 (1h)</li>
+      <li>Sintaxe Básica em JavaScript - BootCamp Santander DIO, 2023 (2h)</li>
+      <li>Introdução a Criação de Websites com HTML5 e CSS3 - BootCamp Santander DIO, 2023 (6h)</li>
+      <li>Versionamento de Código com Git e GitHub - BootCamp Santander DIO, 2023 (2h)</li>
+      <li>Inglês básico e intermediário - Centro de Línguas Estrangeiras, 2019 (450h)</li>
+      <li>Inglês Nível 3 - Plataforma My English Online, 2017 (60h)</li>
+      <li>Norma Regulamentadora Nº10 (NR10) - CENTEC, 2021 (40h)</li>
+      <li>Energia Solar Fotovoltaica - WMJ Engenharia, 2019 (20h)</li>
+      <li>Especialista Fotovoltaico 2.0 - Soliens, 2021 (250h)</li>
+      <li>Cursos avançados em energia fotovoltaica - Soliens, 2021 (100h)</li>
+      <li>MatLab para Engenharia Elétrica - PET E.E UFC, 2016 (8h)</li>
+      <li>Montagem e manutenção de micros - Microlins, 2015 (114h)</li>
+      <li>Jovem Digital - CED (Centro de Educação a Distância) UFC, 2015 (100h)</li>
+    </ul>
+  </section>
+
+  <!-- CONHECIMENTOS ADICIONAIS -->
+  <section class="section">
+    <h2 data-i18n="conhecimentos">CONHECIMENTOS ADICIONAIS</h2>
+    <ul>
+      <li>Programação em Python para Machine Learning e Deep Learning</li>
+      <li>Reconhecimento facial com OpenCV e Python</li>
+      <li>Programação em MATLAB, Scilab e Octave para Machine Learning</li>
+      <li>Programação em JavaScript para aplicações web</li>
+      <li>VBA (Excel) para automação de tarefas repetitivas</li>
+      <li>VBA (Excel) com Selenium para Web Scraping</li>
+      <li>Facilidade com programação e aberto para novas linguagens</li>
+    </ul>
+  </section>
+
+  <!-- INFORMAÇÕES COMPLEMENTARES -->
+  <section class="section">
+    <h2>INFORMAÇÕES COMPLEMENTARES</h2>
+    <p>Currículo Lattes: http://lattes.cnpq.br/2764762772022684</p>
+    <p>Canal no YouTube: https://www.youtube.com/@LucasAguiar-bg2dg (Conteúdo técnico, ideias e aulas)</p>
+    <p>WhatsApp: (88) 99286-2019</p>
+  </section>
+
+  <script src="translations.js"></script>
+</body>
+
+</html>
