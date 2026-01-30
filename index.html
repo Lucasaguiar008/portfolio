@@ -30,9 +30,9 @@
   <div id="navMenu" class="navbar-menu">
     <div class="navbar-end">
       <div class="navbar-item language-switcher">
-        <span onclick="setLanguage('pt')" title="Português">🇧🇷</span>
-        <span onclick="setLanguage('en')" title="English">🇺🇸</span>
-        <span onclick="setLanguage('de')" title="Deutsch">🇩🇪</span>
+        <img src="imagens/flags/br.png" alt="Português" onclick="setLanguage('pt')">
+        <img src="imagens/flags/us.png" alt="English" onclick="setLanguage('en')">
+        <img src="imagens/flags/de.png" alt="Deutsch" onclick="setLanguage('de')">
       </div>
       <a class="navbar-item" href="#ats">Versão ATS</a>
     </div>
@@ -71,7 +71,7 @@
 <div class="box">
   <strong id="skills-title">Habilidades Técnicas</strong>
   <hr>
-  <ul id="skills-list">
+  <ul>
     <li>Inteligência Artificial aplicada à Engenharia</li>
     <li>Machine Learning e Otimização</li>
     <li>Python (ML, simulações, análise de dados)</li>
@@ -82,50 +82,6 @@
   </ul>
 </div>
 
-<!-- EXPERIÊNCIA -->
-<div class="box">
-  <strong id="exp-title">Experiência Profissional</strong>
-  <hr>
-
-  <p><strong>Pesquisador – GTEL/UFC</strong> (Abr/2025 – Atual)</p>
-  <p>
-    Desenvolvimento de algoritmos de gerenciamento de interferência em redes 6G utilizando otimização e simulação computacional.
-  </p>
-
-  <br>
-
-  <p><strong>Professor – Tesla Treinamentos</strong> (Jul/2025 – Dez/2025)</p>
-  <p>
-    Docência em cursos de pós-graduação e capacitação técnica nas áreas de engenharia elétrica e energia.
-  </p>
-
-  <br>
-
-  <p><strong>Supervisor Técnico – New Call</strong> (Jan/2016 – Ago/2025)</p>
-  <p>
-    Supervisão de equipes de suporte técnico em redes de computadores e infraestrutura.
-  </p>
-</div>
-
-<!-- FORMAÇÃO -->
-<div class="box">
-  <strong id="edu-title">Formação Acadêmica</strong>
-  <hr>
-  <ul id="edu-list">
-    <li>Doutorado em Engenharia de Teleinformática – UFC (em andamento)</li>
-    <li>Mestrado em Engenharia Elétrica e Computação – UFC</li>
-    <li>Bacharelado em Engenharia Elétrica – UFC</li>
-  </ul>
-</div>
-
-<!-- CONTATO -->
-<div class="box">
-  <strong id="contact-title">Contato</strong>
-  <hr>
-  <p><i class="fa-solid fa-envelope"></i> lucas.aguiar008@gmail.com</p>
-  <p><i class="fa-brands fa-linkedin"></i> linkedin.com/in/lucas-aguiar-2363b2168</p>
-</div>
-
 <!-- ATS -->
 <div class="box ats" id="ats">
   <strong>Versão ATS (Texto Linear)</strong>
@@ -134,7 +90,6 @@
 Lucas Aguiar
 Electrical Engineer focused on Artificial Intelligence applied to engineering.
 Skills: Python, Machine Learning, Optimization, MATLAB, Telecommunications, Electrical Systems.
-Experience: Researcher GTEL/UFC, Professor, Technical Supervisor.
 Education: PhD (ongoing), MSc, BSc in Electrical Engineering.
 Contact: lucas.aguiar008@gmail.com
   </pre>
@@ -149,38 +104,25 @@ function setLanguage(lang) {
 
   if (lang === 'en') {
     document.documentElement.lang = "en";
-
     document.getElementById("title-role").innerText =
       "Electrical Engineer | Artificial Intelligence applied to Engineering";
-
     document.getElementById("summary-title").innerText = "Professional Summary";
     document.getElementById("summary-text").innerText =
       "Electrical Engineer with a Master's degree and PhD in progress, working with Artificial Intelligence, optimization and computational simulation applied to engineering.";
-
     document.getElementById("skills-title").innerText = "Technical Skills";
-    document.getElementById("exp-title").innerText = "Professional Experience";
-    document.getElementById("edu-title").innerText = "Education";
-    document.getElementById("contact-title").innerText = "Contact";
   }
 
   else if (lang === 'de') {
     document.documentElement.lang = "de";
-
     document.getElementById("title-role").innerText =
       "Elektroingenieur | Künstliche Intelligenz in der Ingenieurwissenschaft";
-
     document.getElementById("summary-title").innerText = "Berufliches Profil";
     document.getElementById("summary-text").innerText =
-      "Elektroingenieur mit Masterabschluss und laufender Promotion, tätig in den Bereichen Künstliche Intelligenz, Optimierung und rechnergestützte Simulation in der Ingenieurwissenschaft.";
-
+      "Elektroingenieur mit Masterabschluss und laufender Promotion, tätig in den Bereichen Künstliche Intelligenz, Optimierung und rechnergestützte Simulation.";
     document.getElementById("skills-title").innerText = "Technische Kompetenzen";
-    document.getElementById("exp-title").innerText = "Berufserfahrung";
-    document.getElementById("edu-title").innerText = "Akademische Ausbildung";
-    document.getElementById("contact-title").innerText = "Kontakt";
   }
 
   else {
-    document.documentElement.lang = "pt-br";
     location.reload();
   }
 }
