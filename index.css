@@ -1,19 +1,16 @@
-.box:hover {
-    transform: scale(1.05);
-    transition: all 0.5s;
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-.card:hover {
-    transform: scale(1.05);
-    transition: all 0.5s;
+ul li {
+  margin-bottom: 6px;
 }
 
-.is-1by2:hover {
-    transform: scale(1.05);
-    transition: all 0.5s;
+.ats {
+  background-color: #f9f9f9;
 }
 
-a:hover {
-    transform: scale(1.3);
-    transition: all 0.5s;
+pre {
+  white-space: pre-wrap;
+  font-size: 0.9rem;
 }
